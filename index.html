@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>		
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="true">
+    <meta name = "format-detection" content = "telephone=no">
+
+    <title>Password Generator</title>
+
+	<!-- Style -->
+    <link rel="stylesheet"  href="/style.css" />
+
+</head>
+<body>
+<div class="container">
+    <h2>Password Generator</h2>
+    <div class="result-box">
+        <span class="result" id="result"></span>
+        <button class="btn" id="clipboard">
+            <i class="fa fa-clipboard"></i>
+        </button>
+    </div>
+    <div class="settings-box">
+        <div class="setting">
+            <input type="checkbox" id="uppercase" checked>
+            <label for="uppercase">Uppercase letters</label>
+        </div>
+        <div class="setting">
+            <input type="checkbox" id="lowercase" checked>
+            <label for="lowercase">Lowercase letters</label>
+        </div>
+        <div class="setting">
+            <input type="checkbox" id="numbers" checked>
+            <label for="numbers">Include numbers</label>
+        </div>
+        <div class="setting">
+            <input type="checkbox" id="symbols" checked>
+            <label for="symbols">Include symbols</label>
+        </div>
+    </div>
+    <div class="length range-box" data-min="4" data-max="32">
+        <div class="length-title">
+            Length: <span id="lengthCount">4</span>
+        </div>
+        <input type="range" id="length" min="4" max="32" value="4">
+    </div>
+    <button class="btn btn-large" id="generate">Generate</button>
+</div>
+    
+
+
+ <!-- Script -->
+ <script src="/gen-app.js"></script>
+</body>  
+</html>
